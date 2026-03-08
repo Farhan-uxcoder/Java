@@ -5,6 +5,4 @@ public class Arrays{
 
         System.out.println("hey moon!");
     }
-
-
 }
