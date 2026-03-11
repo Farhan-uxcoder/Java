@@ -1,0 +1,42 @@
+public class ExceptionExample {
+    public static void main(String[] args) {
+        try {
+            // Example: risky operation
+            int[] numbers = {1, 2, 3};
+            System.out.println("Accessing element at index 5...");
+            
+            // This will throw ArrayIndexOutOfBoundsException
+            int value = numbers[5];  
+            System.out.println("Value: " + value);
+
+        } catch (ArrayIndexOutOfBoundsException e) {
+            // Handle specific exception
+            System.out.println("Error: Tried to access invalid index.");
+            System.out.println("Exception message: " + e.getMessage());
+
+        } catch (Exception e) {
+            // Handle any other exception
+            System.out.println("General error occurred: " + e);
+
+        } finally {
+            // Always runs, even if exception occurs
+            System.out.println("Execution finished. Cleaning up resources...");
+        }
+
+        // Example of throwing your own exception
+        try {
+            validateAge(15);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Custom exception caught: " + e.getMessage());
+        }
+    }
+
+    // Method that throws an exception
+    public static void validateAge(int age) {
+        if (age < 18) {
+            throw new IllegalArgumentException("Age must be 18 or above.");
+        } else {
+            System.out.println("Age is valid.");
+        }
+    }
+}

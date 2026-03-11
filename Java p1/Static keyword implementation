@@ -1,0 +1,47 @@
+class Student {
+
+    // static variable (shared by all objects)
+    static int count = 0;
+
+    // instance variable (different for each object)
+    String name;
+
+    // static block (runs only once when class is loaded)
+    static {
+        System.out.println("Static Block Executed");
+    }
+
+    // constructor
+    Student(String name) {
+        this.name = name;
+        count++;  // increases static counter
+    }
+
+    // static method (can be called without an object)
+    static void showCount() {
+        System.out.println("Total Students: " + count);
+    }
+
+    // instance method
+    void display() {
+        System.out.println("Name: " + name);
+    }
+}
+
+public class StaticDemo {
+    public static void main(String[] args) {
+
+        // calling static method without object
+        Student.showCount();
+
+        // creating objects
+        Student s1 = new Student("Farhan");
+        Student s2 = new Student("Mohammed");
+
+        s1.display();
+        s2.display();
+
+        // calling static method again
+        Student.showCount();
+    }
+}
