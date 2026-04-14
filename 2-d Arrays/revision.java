@@ -34,7 +34,7 @@ public class revision {
 
         // the variable names can also start with the symbol $
 
-        // System.out.println("Enter the value to check weaather the variabe can take values if there name starts with '$'");
+        // System.out.println("Enter the value to check weather the variable can take values if there name starts with '$'");
         // int $num = sc.nextInt();
         // System.out.println("The value of $num is : "+ $num);
         // System.out.println("Hence proved as we can use '$' symbol for naming the variables ");
@@ -81,7 +81,7 @@ print the inverted triangle pattern
         }
 
         /*
-        print the following charecter pattern
+        print the following character pattern
         A
         B C
         D E F
