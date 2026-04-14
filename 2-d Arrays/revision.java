@@ -1,6 +1,22 @@
 import java.util.*;
 public class revision {
 
+    // functions to reverse an array
+    public static void rev_arr(int arr[]){
+        int start = 0 , last = arr.length-1;
+        while (start < last){
+            int temp = arr[last];
+            arr[last] = arr[start];
+            arr[start] = temp;
+            start++;
+            last--;
+        }
+        for(int i = 0;i<arr.length;i++){
+        System.out.print(arr[i]+" ");
+        }
+    }
+
+
 
     public static int ls(int a[],int key){
         for(int i=0;i<a.length;i++){
@@ -112,6 +128,9 @@ print the inverted triangle pattern
         }else{
             System.out.println("element found at "+res);
         }
+        System.out.println("The reversed array is :");
+        rev_arr(arr);
+
 
 
 
