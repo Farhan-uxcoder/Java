@@ -16,8 +16,6 @@ public class revision {
         }
     }
 
-
-
     public static int ls(int a[],int key){
         for(int i=0;i<a.length;i++){
             if(a[i]==key){
@@ -130,9 +128,10 @@ print the inverted triangle pattern
         }
         System.out.println("The reversed array is :");
         rev_arr(arr);
-
-
-
-
+        sc.close();
     }
 }
+
+
+
+
